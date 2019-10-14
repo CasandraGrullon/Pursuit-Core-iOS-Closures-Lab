@@ -33,10 +33,10 @@ func multiples(of num: Int, in numbers: [Int]) -> [Int] {
 
 // Uncomment out the following lines to check your solution
 
-let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
-let expectedOutputTwo = [3, 6, 9, 3, 12]
-let outputTwo = multiples(of: 3, in: numbers)
-assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
+//let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+//let expectedOutputTwo = [3, 6, 9, 3, 12]
+//let outputTwo = multiples(of: 3, in: numbers)
+//assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
 
 
 // Question Three
@@ -44,13 +44,19 @@ assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTw
 // Write a function called largestValue(in:) that finds the largest Int in an array of Ints. Use reduce to solve this exercise.
 
 // Your function here
-
+func largestValue(in arr: [Int]) -> Int {
+    var reducedValue = Int()
+    for _ in arr {
+        reducedValue = arr.reduce(0,)
+    }
+    return reducedValue
+}
 // Uncomment out the following lines to check your solution
 
-//let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
-//let expectedOutputThree = 9
-//let outputThree = largestValue(in: moreNumbers)
-//assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
+let moreNumbers = [4, 7, 1, 9, 6, 5, 6, 9]
+let expectedOutputThree = 9
+let outputThree = largestValue(in: moreNumbers)
+assert(outputThree == expectedOutputThree, "Expected output to be \(expectedOutputThree), but found \(outputThree)")
 
 
 // Question Four
