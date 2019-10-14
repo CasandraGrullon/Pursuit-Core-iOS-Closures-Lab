@@ -7,6 +7,7 @@ import UIKit
 
 // Your function here
 
+
 // Uncomment out the following lines to check your solution
 
 //var myVal = 0
@@ -21,13 +22,21 @@ import UIKit
 // Write a function called multiples(of:in) that takes in an array of Ints and returns all of the Ints that are a multiple of a given number n.  Use filter in your function.
 
 // Your function here
+func multiples(of num: Int, in numbers: [Int]) -> [Int] {
+    var filteredNumbers = [Int]()
+    for num in numbers {
+        filteredNumbers = numbers.filter {_ in num % 3 == 0}
+    }
+    return filteredNumbers
+}
+
 
 // Uncomment out the following lines to check your solution
 
-//let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
-//let expectedOutputTwo = [3, 6, 9, 3, 12]
-//let outputTwo = multiples(of: 3, in: numbers)
-//assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
+let numbers = [1, 2, 3, 4, 6, 8, 9, 3, 12, 11]
+let expectedOutputTwo = [3, 6, 9, 3, 12]
+let outputTwo = multiples(of: 3, in: numbers)
+assert(outputTwo == expectedOutputTwo, "Expected output to be \(expectedOutputTwo), but found \(outputTwo)")
 
 
 // Question Three
